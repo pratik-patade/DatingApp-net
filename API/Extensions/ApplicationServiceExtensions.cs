@@ -1,5 +1,6 @@
 using API.Data;
 using API.Interfaces;
+using API.Middleware;
 using Microsoft.EntityFrameworkCore;
 namespace API.Extensions
 {
@@ -24,7 +25,9 @@ namespace API.Extensions
             });
 
             services.AddScoped<ITokenService, TokenService>();
-            
+
+            services.AddTransient<ExceptionMiddleware>();
+
             return services;
         }
     }

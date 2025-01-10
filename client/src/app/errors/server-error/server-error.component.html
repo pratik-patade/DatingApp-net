@@ -1,0 +1,15 @@
+<h4>Internal Server Error</h4>
+@if(error){
+<pre>{{error | json}}</pre>
+<p class="font-weight-bold">Please contact the administrator</p>
+<p>What to do next?</p>
+<ol>
+    <li>Refresh the page</li>
+    <li>Try again later</li>
+    <li>Contact the administrator</li>
+</ol>
+<p class="font-weight-bold">Following is the stack trace - Check first 2 lines to get hold of error</p>
+<code class="mt-5" style="background-color: whitesmoke;">
+    {{error.details}}
+</code>
+}
